@@ -51,3 +51,15 @@ p.footer-text{
 	color: white;
 	text-align: center;
 }
+
+a.phone-number{
+	color: black;
+}
+
+a.phone-number:hover{
+	text-decoration: none;
+}
+
+a.mail:hover{
+	text-decoration: none;
+}

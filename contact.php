@@ -15,11 +15,11 @@
 			<table>
 				<tr>
 			    	<td><p><strong>Phone: </strong></p></td>
-			    	<td><p> 07 8690569</p></td> 
+			    	<td><p style="padding-left: 5px;"><a href="tel:07-8690569" class="phone-number"> 07 8690569</a></p></td> 
 			  	</tr>
 			  	<tr>
 			    	<td><p><strong>Email: </strong></p></td>
-			    	<td><p>mcgreen@xtra.co.nz</p></td> 
+			    	<td><p><a href="mailto:mcgreen@xtra.co.nz?Subject=Website%20Enquiry" target="_top" class="mail"> mcgreen@xtra.co.nz</a></p></td> 
 			  	</tr>
 			</table>
 
