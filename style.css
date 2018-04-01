@@ -1,0 +1,23 @@
+.content-container{
+	background-color: #eee;
+	min-height: 600px;
+}
+
+.navbar{
+	border-radius: 0px !important;
+}
+
+.header{
+	margin-left: 2%;
+}
+
+.left-section{
+	margin-left: 2%;
+	max-width: 700px;
+	background-color: red;
+}
+
+div.center-text{
+	margin-left: 2%;
+	margin-right: 2%;
+}
