@@ -14,10 +14,27 @@
 .left-section{
 	margin-left: 2%;
 	max-width: 700px;
-	background-color: red;
+	/*background-color: red;*/
+	float: left;
 }
+
+.right-section{
+	float: right;
+	/*background-color: yellow;*/
+	min-width: 600px;
+	margin-right: 2%;
+}
+
 
 div.center-text{
 	margin-left: 2%;
 	margin-right: 2%;
+}
+
+.message-form{
+	margin-top: 5%;
+}
+
+.map-wrapper{
+	margin-top: 5%;
 }

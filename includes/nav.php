@@ -4,7 +4,7 @@
 		      <li><a href="index.php">Home</a></li>
 		      <li><a href="about.php">About Us</a></li>
 		      <li><a href="#">Shop</a></li>
-		      <li><a href="#">Contact</a></li>
+		      <li><a href="contact.php">Contact</a></li>
 		    </ul>
 
 		    <ul class="nav navbar-nav navbar-right">
