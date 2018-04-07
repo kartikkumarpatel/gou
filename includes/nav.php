@@ -1,15 +1,29 @@
+<script>
+function myFunction() {
+    var x = document.getElementById("navigation");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
-		    <ul class="nav navbar-nav">
-		      <li><a href="index.php">Home</a></li>
-		      <li><a href="about.php">About Us</a></li>
-		      <li><a href="#">Shop</a></li>
-		      <li><a href="contact.php">Contact</a></li>
-		    </ul>
 
-		    <ul class="nav navbar-nav navbar-right">
-		      <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-		      <li><a href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
-		    </ul>
+		    <div class="nav" id="navigation">
+			  <a href="index.php" class="active">Home</a>
+			  <a href="about.php">About</a>
+			  <a href="shop.php">Shop</a>
+			  <a href="contact.php">Contact</a>
+			  
+			  <a class="nav navbar-right" href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a>
+
+			  <a class="nav navbar-right" href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a>
+
+			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			  
+			</div>
 		  </div>
 		</nav>
