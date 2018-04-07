@@ -9,7 +9,7 @@
 
 		    <ul class="nav navbar-nav navbar-right">
 		      <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
+		      <li><a href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
 		    </ul>
 		  </div>
 		</nav>

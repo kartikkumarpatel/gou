@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include('includes/header.php'); ?>
-	<title>Login</title>
+	<?php include 'includes/header.php'; ?>
+	<title>Register</title>
 </head>
 <body>
 	<div class="content-container">
-		<?php include('includes/nav.php'); ?>
+		<?php include 'includes/nav.php' ?>
 
 		<div class="login-form well">
-			<h3 class="form-title">Enter your login information</h3>
+			<h3 class="form-title">Enter a valid email and password to register</h3>
 			<form method="post" action="login.php">
 			  <div class="form-group">
 			    <label for="email">Email</label>
