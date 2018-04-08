@@ -18,7 +18,8 @@ function myFunction() {
 			  <a href="shop.php">Shop</a>
 			  <a href="contact.php">Contact</a>
 			  
-			  <a class="nav navbar-right" href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a>
+			  
+			  <a class="nav navbar-right hamburger-register" href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a>
 
 			  <a class="nav navbar-right" href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a>
 

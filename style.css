@@ -116,6 +116,10 @@ a.mail:hover{
     float: right;
     display: block;
   }
+
+  a.hamburger-register{
+  	border-top: 2px dotted white;
+  }
 }
 
 @media screen and (max-width: 600px) {
