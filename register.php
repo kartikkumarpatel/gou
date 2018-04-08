@@ -6,9 +6,20 @@
 		$password = $_POST['password'];
 
 		$encrypt = md5($password);
-		$sql = 'INSERT INTO members(email, password) VALUES ( "'.$email.'", "'.$encrypt.'")';
+		$check_user = "SELECT email from members WHERE email = '$email'";
+		$user_result = mysqli_query($dbconn, $check_user);
 
-		mysql_query($sql);
+		$insert_user = "INSERT INTO members(email, password) VALUES ('$email', '$encrypt')";
+
+		if (empty($email) || empty($password)) {
+			$message = "One of the fields have been left blank.";
+		}
+		else if (mysqli_num_rows($user_result) > 0) {
+			$message = "User already exits with that email, please use another email.";
+		}else{
+			mysqli_query($dbconn, $insert_user);
+			$message = "User Created. Go to login!";
+		}
 	}
 ?>
 
@@ -24,7 +35,7 @@
 
 		<div class="login-form well">
 			<h3 class="form-title">Enter a valid email and password to register</h3>
-			<form method="post" action="login.php">
+			<form method="post" action="register.php">
 			  <div class="form-group">
 			    <label for="email">Email</label>
 			    <input type="text" name='email' class="form-control" id="email" placeholder="Enter Name" style="width: 300px;">
@@ -36,6 +47,10 @@
 		
 			 <input type="submit" name="submit" class="btn btn-deafult" value="Login" />
 			</form>
+
+			<div class="message">
+				<?php echo $message ?>
+			</div>
 		</div>
 	</div>
 
