@@ -1,5 +1,5 @@
 <?php
-	include 'includes/dbconn.php'; 
+	include_once 'includes/dbconn.php'; 
 	
 	if (isset($_POST['submit'])) {
 		$email = $_POST['email'];
@@ -13,8 +13,7 @@
 
 		if (empty($email) || empty($password)) {
 			$message = "One of the fields have been left blank.";
-		}
-		else if (mysqli_num_rows($user_result) > 0) {
+		}else if (mysqli_num_rows($user_result) > 0) {
 			$message = "User already exits with that email, please use another email.";
 		}else{
 			mysqli_query($dbconn, $insert_user);
