@@ -1,3 +1,17 @@
+<?php
+	include 'includes/dbconn.php'; 
+	
+	if (isset($_POST['submit'])) {
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+
+		$encrypt = md5($password);
+		$sql = 'INSERT INTO members(email, password) VALUES ( "'.$email.'", "'.$encrypt.'")';
+
+		mysql_query($sql);
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +31,7 @@
 			  </div>
 			  <div class="form-group">
 			    <label for="email">Password</label>
-			    <input type="password" name='email' class="form-control" id="password" placeholder="Enter Password" style="width: 300px;">
+			    <input type="password" name='password' class="form-control" id="password" placeholder="Enter Password" style="width: 300px;">
 			  </div>
 		
 			 <input type="submit" name="submit" class="btn btn-deafult" value="Login" />
