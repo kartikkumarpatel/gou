@@ -1,21 +1,24 @@
 <?php
-	include 'includes/dbconn.php';
+	include_once 'includes/dbconn.php';
 
 	if (isset($_POST['submit'])) {
 		$email = $_POST['email'];
 		$password = md5($_POST['password']);
 
 		$user = "SELECT * FROM members WHERE email = '$email' AND password = '$password'";
-		$execute_user = mysqli_query($dbconn, $user);
+		$execute_user = mysqli_query($dbconn, $user) or die(mysqli_error());
 		$data = mysqli_fetch_assoc($execute_user);
 
 		if (empty($email) || empty($password )) {
 			$message = "One of the fields have been left blank.";
-		}else if(mysqli_num_rows($execute_user) > 0) {
-			start_session();
-			$_SESSION['email'] = '$email';
-			$_SESSION['email'] = $data['email'];
-			$message = "loged in";
+		}else if(mysqli_num_rows($execute_user)) {
+			// start_session();
+			// $_SESSION['email'] = '$email';
+			// $_SESSION['email'] = $data['email'];
+			// $message = "loged in";
+			// $message = "string";
+			header("Location: index.php");
+			exit();
 		}else{
 			$message = "Incorrect email or password";
 		}
@@ -47,7 +50,9 @@
 		
 			 <input type="submit" name="submit" class="btn btn-deafult" value="Login" />
 			</form>
-			<?php echo $message ?>
+			<div class="message">
+				<?php echo $message ?>
+			</div>
 		</div>
 	</div>
 
