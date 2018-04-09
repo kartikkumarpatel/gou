@@ -4,11 +4,13 @@
 	width: 100%;
 }
 
-
 .message{
   color: red;
 }
 
+.logged-out{
+  text-align: center;
+}
 
 .navbar{
 	border-radius: 0px !important;

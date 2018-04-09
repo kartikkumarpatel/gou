@@ -23,18 +23,27 @@ function myFunction() {
 			  <a href="shop.php">Shop</a>
 			  <a href="contact.php">Contact</a>
 			  
-			  
-			  <a class="nav navbar-right hamburger-register" href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a>
+			  	<?php
+			  		$logout = 'Logout';
+			  		$register = "Register";
 
-			  <a class="nav navbar-right" href="login.php"><span class="glyphicon glyphicon-user"></span> 
-			  	<?php 
-			  		if ($_SESSION['email']) {
-			  			echo $_SESSION['email'];
+			  		if (!$_SESSION['email']) {
+			  			echo '<a class="nav navbar-right hamburger-register" href="register.php"><span class="glyphicon glyphicon-log-in"></span> ' .$register. '</a>';
 			  		}else{
-			  			echo "Login";
+			  			echo '<a class="nav navbar-right hamburger-register" href="logout.php"><span class="glyphicon glyphicon-log-in"></span> ' .$logout. '</a>';
 			  		}
-			  	?></a>
+			  	?>
 
+			  	<?php 
+			  		$login = "Login";
+			  		$user = $_SESSION['email'];
+
+			  		if ($_SESSION['email']) {
+			  			echo '<a class="nav navbar-right hamburger-register" href="login.php"><span class="glyphicon glyphicon-user"></span> ' .$user. '</a>';
+			  		}else{
+			  			echo '<a class="nav navbar-right hamburger-register" href="login.php"><span class="glyphicon glyphicon-user"></span> ' .$login. '</a>';
+			  		}
+			  	?>
 			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 			  
 			</div>
