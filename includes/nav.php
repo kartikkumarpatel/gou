@@ -7,6 +7,11 @@ function myFunction() {
         x.className = "nav";
     }
 }
+
+<?php
+	session_start();
+?>
+
 </script>
 
 		<nav class="navbar navbar-inverse">
@@ -21,7 +26,14 @@ function myFunction() {
 			  
 			  <a class="nav navbar-right hamburger-register" href="register.php"><span class="glyphicon glyphicon-log-in"></span> Register</a>
 
-			  <a class="nav navbar-right" href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a>
+			  <a class="nav navbar-right" href="login.php"><span class="glyphicon glyphicon-user"></span> 
+			  	<?php 
+			  		if ($_SESSION['email']) {
+			  			echo $_SESSION['email'];
+			  		}else{
+			  			echo "Login";
+			  		}
+			  	?></a>
 
 			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 			  
