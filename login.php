@@ -12,11 +12,9 @@
 		if (empty($email) || empty($password )) {
 			$message = "One of the fields have been left blank.";
 		}else if(mysqli_num_rows($execute_user)) {
-			// start_session();
-			// $_SESSION['email'] = '$email';
-			// $_SESSION['email'] = $data['email'];
-			// $message = "loged in";
-			// $message = "string";
+			session_start();
+			$_SESSION['email'] = '$email';
+			$_SESSION['email'] = $data['email'];
 			header("Location: index.php");
 			exit();
 		}else{
