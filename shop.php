@@ -43,19 +43,19 @@
 
 
 
-				<div class="col-sm-8 well">
+				<div class="col-sm-10 well">
 					<?php include 'includes/roses.php'; ?>
 				</div>
 
-				<div class="col-sm-2 well">
+				<!-- <div class="col-sm-2 well">
 					<strong>Cart</strong>
-				</div>
+				</div> -->
 
 			</div>			
 		</div>
 	</div>
-	<div>
+	<!-- <div>
 		<?php include'includes/footer.php'; ?>
-	</div>
+	</div> -->
 </body>
 </html>

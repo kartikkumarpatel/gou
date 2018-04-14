@@ -48,10 +48,13 @@
 	display: none;
 }
 
+.main{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-.flower-type{
-  /*width: 300px; */
-  
+.rose-data{
+  padding-top: 5px;
 }
 
 .header{
@@ -133,8 +136,12 @@ a.mail:hover{
 
 .roses-nav a:hover{
   text-decoration: none;
-  background-color: yellow;
+  background-color: lightgray;
   color: black;
+}
+
+.roses-nav a:active{
+  background-color: lightgray;
 }
 
 @media screen and (max-width: 600px) {
