@@ -119,6 +119,24 @@ a.mail:hover{
 	text-decoration: none;
 }
 
+.roses-nav{
+  display: block;
+}
+
+.roses-nav a{
+  display: block;
+  padding: 8px;
+  color: black;
+  padding-left: 0;
+  border-bottom: .5px dotted black;
+}
+
+.roses-nav a:hover{
+  text-decoration: none;
+  background-color: yellow;
+  color: black;
+}
+
 @media screen and (max-width: 600px) {
   .nav a:not(:first-child) {
   	display: none;

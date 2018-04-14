@@ -25,18 +25,23 @@
 		
 		<div class="container-fluid">
 			<div class="row row-roses">
+
+
 				<div class="col-sm-2 well">
 					<strong>Categories</strong>
+						<div class="roses-nav">
+							<?php do { ?>
+							<a class="roses-nav" href="shop.php?typeID=<?php echo $type_nav['typeID']; ?>" <?php if ($type_id == $type_nav['typeID']) {
+								echo 'class="current"';
+							} ?>>
+							<?php echo $type_nav['type']; ?> </a>
 
-					<?php do { ?>
-					<li><a href="shop.php?typeID=<?php echo $type_nav['typeID']; ?>" <?php if ($type_id == $type_nav['typeID']) {
-						echo 'class="current"';
-					} ?>>
-					<?php echo $type_nav['type']; ?> </a></li>
+							<?php } while ($type_nav = mysqli_fetch_assoc($type_query)) ?>
 
-					<?php } while ($type_nav = mysqli_fetch_assoc($type_query)) ?>
-
+						</div>
 				</div>
+
+
 
 				<div class="col-sm-8 well">
 					<?php include 'includes/roses.php'; ?>
