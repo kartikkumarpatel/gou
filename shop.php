@@ -47,10 +47,6 @@
 					<?php include 'includes/roses.php'; ?>
 				</div>
 
-				<!-- <div class="col-sm-2 well">
-					<strong>Cart</strong>
-				</div> -->
-
 			</div>			
 		</div>
 	</div>
