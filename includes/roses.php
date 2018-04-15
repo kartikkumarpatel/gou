@@ -1,3 +1,17 @@
+<?php
+	session_start();
+
+	//check to see if user is loged in before adding it to the cart. if they are not print a message telling them to log in.
+
+	if (isset($_POST['submit']) && $_SESSION['email']) {
+		$work = "buttong working";
+	}else{
+		$work = "not working";
+	}
+?>
+
+<p><?php echo $work ?></p>
+
 <table>
 		<tr>
 			<th class="col-sm-1">Images</th>
@@ -27,9 +41,10 @@
 		<td class="col-sm-4"><?php echo $row['decription']; ?></td>
 		<td class="col-sm-1"><?php echo $row['price']; ?></td>
 		<td class="col-sm-2">
-	        <div>
-		   		<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
-       		</div>
+			<form method="post" action="shop.php">
+				<input type="submit" name="submit" class="btn btn-default btn-sm" value="Add To Cart" />
+			</form>
+		   	
 	   	</td>
 	</tr>
 
