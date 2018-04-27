@@ -38,12 +38,17 @@ function myFunction() {
 			  		$login = "Login";
 			  		$user = $_SESSION['email'];
 
+			  		$added = 0;
+
 			  		if ($_SESSION['email']) {
-			  			echo '<a class="nav navbar-right hamburger-register" href="login.php"><span class="glyphicon glyphicon-user"></span> ' .$user. '</a>';
+			  			echo '<a class="nav navbar-right hamburger-register"><span class="glyphicon glyphicon-user"></span> ' .$user. '</a>';
+
+			  			// echo '<a class="nav navbar-right hamburger-register"><span class="glyphicon glyphicon-shopping-cart"></span> ' .$added. '</a>';
 			  		}else{
 			  			echo '<a class="nav navbar-right hamburger-register" href="login.php"><span class="glyphicon glyphicon-user"></span> ' .$login. '</a>';
 			  		}
 			  	?>
+
 			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 			  
 			</div>

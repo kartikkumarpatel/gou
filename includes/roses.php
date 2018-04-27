@@ -3,14 +3,13 @@
 
 	//check to see if user is loged in before adding it to the cart. if they are not print a message telling them to log in.
 
-	if (isset($_POST['submit']) && $_SESSION['email']) {
-		$work = "buttong working";
-	}else{
-		$work = "not working";
+	if (isset($_POST['submit']) && !($_SESSION['email'])) {
+		$work = "User need's to login";
 	}
 ?>
-
-<p><?php echo $work ?></p>
+<div class="log-message">
+	<h4><?php echo $work ?></h4>
+</div>
 
 <table>
 		<tr>

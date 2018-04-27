@@ -8,6 +8,11 @@
   color: red;
 }
 
+.log-message{
+  color: red;
+  text-align: center;
+}
+
 .logged-out{
   text-align: center;
 }
