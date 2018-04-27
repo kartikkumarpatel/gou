@@ -8,6 +8,15 @@
   color: red;
 }
 
+th, td{
+  padding: 5px !important;
+}
+
+.cart-buttons{
+  float: right;
+  margin-right: 230px;
+}
+
 .log-message{
   color: red;
   text-align: center;
