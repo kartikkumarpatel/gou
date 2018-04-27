@@ -5,6 +5,6 @@
 		$_SESSION['cart'][] = array("img" => $_GET['img'], "nm" => $_GET['nm'], "type" => $_GET['type'], "price" => $_GET['price'], "qty" => 1);
 	}
 
-	header("location: cart.php");
+	header("location: shop.php");
 
 ?>

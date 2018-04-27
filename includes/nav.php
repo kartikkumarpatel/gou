@@ -38,12 +38,12 @@ function myFunction() {
 			  		$login = "Login";
 			  		$user = $_SESSION['email'];
 
-			  		$added = 0;
+			  		$added = count($_SESSION['cart']);
 
 			  		if ($_SESSION['email']) {
 			  			echo '<a class="nav navbar-right hamburger-register"><span class="glyphicon glyphicon-user"></span> ' .$user. '</a>';
 
-			  			// echo '<a class="nav navbar-right hamburger-register"><span class="glyphicon glyphicon-shopping-cart"></span> ' .$added. '</a>';
+			  			 echo '<a class="nav navbar-right hamburger-register"><span class="glyphicon glyphicon-shopping-cart"></span> ' .$added. '</a>';
 			  		}else{
 			  			echo '<a class="nav navbar-right hamburger-register" href="login.php"><span class="glyphicon glyphicon-user"></span> ' .$login. '</a>';
 			  		}

@@ -25,24 +25,8 @@
 		<?php include 'includes/nav.php'; ?>
 		
 		<div class="container-fluid">
-			<div class="row row-roses">
-
-				<div class="col-sm-2 well">
-					<strong>Categories</strong>
-						<div class="roses-nav">
-							<?php do { ?>
-							<a class="roses-nav" href="shop.php?typeID=<?php echo $type_nav['typeID']; ?>" <?php if ($type_id == $type_nav['typeID']) {
-								echo 'class="current"';
-							} ?>>
-							<?php echo $type_nav['type']; ?> </a>
-
-							<?php } while ($type_nav = mysqli_fetch_assoc($type_query)) ?>
-
-						</div>
-				</div>
-
 				<div>
-					<table class="col-md-8" border="1px">
+					<table class="table table-hover" border="1px" width="50%">
 						<tr>
 						    <th>Image</th>
 						    <th>Name</th> 
@@ -70,7 +54,5 @@
 				</div>
 			</div>		
 		</div>
-	</div>
-
 </body>
 </html>
