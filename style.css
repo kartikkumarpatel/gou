@@ -12,9 +12,22 @@ th, td{
   padding: 5px !important;
 }
 
+.confirm-order{
+  width: 50%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px !important;
+  min-height: auto !important;
+}
+
 .cart-buttons{
-  float: right;
+  float: right; */
+  width: 155px;
   margin-right: 230px;
+  position: relative;
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 .log-message{

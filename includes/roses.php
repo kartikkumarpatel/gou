@@ -1,8 +1,6 @@
 <?php
 	session_start();
 
-	//check to see if user is loged in before adding it to the cart. if they are not print a message telling them to log in.
-
 	if (isset($_POST['submit']) && !($_SESSION['email'])) {
 		$work = "User need's to login";
 	}
@@ -40,7 +38,7 @@
 		<td class="col-sm-4"><?php echo $row['decription']; ?></td>
 		<td class="col-sm-1"><?php echo $row['price']; ?></td>
 		<td class="col-sm-2"> 
-			<a href="addToCart.php?img=thumbnails/<?php echo $row['rose_image']; ?>&nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
+			<a class="btn btn-default" href="addToCart.php?img=thumbnails/<?php echo $row['rose_image']; ?>&nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
 		</td>
 	</tr>
 
