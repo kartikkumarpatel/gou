@@ -39,12 +39,6 @@
 							<?php } while ($type_nav = mysqli_fetch_assoc($type_query)) ?>
 
 						</div>
-
-						<br>
-						
-						<div>
-							<strong>Cart</strong>
-						</div>
 				</div>
 
 
