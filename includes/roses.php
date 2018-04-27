@@ -39,12 +39,9 @@
 		<td class="col-sm-1"><?php echo $row['fragrant']; ?></td>
 		<td class="col-sm-4"><?php echo $row['decription']; ?></td>
 		<td class="col-sm-1"><?php echo $row['price']; ?></td>
-		<td class="col-sm-2">
-			<form method="post" action="shop.php">
-				<input type="submit" name="submit" class="btn btn-default btn-sm" value="Add To Cart" />
-			</form>
-		   	
-	   	</td>
+		<td class="col-sm-2"> 
+			<a href="addToCart.php?nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
+		</td>
 	</tr>
 
 <?php } ?>
