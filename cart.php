@@ -1,6 +1,14 @@
 <?php 
 	session_start();
 	require_once 'includes/dbconn.php';
+
+	if(isset($_GET['id'])){
+		unset($_SESSION['cart'][$_GET['id']]);
+	}else if (isset($_POST)) {
+		foreach ($_POST as $id => $value) {
+			$_SESSION['cart'][$id]['qty'] = $value;
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -15,43 +23,43 @@
 		
 		<div class="container-fluid">
 				<div>
-					<table class="table-hover" border="1px" width="80%" style="line-height: 30px; margin-left: auto; margin-right: auto;">
-						<tr>
-						    <th>Image</th>
-						    <th>Name</th> 
-						    <th>Price</th>
-						    <th>Quanity</th>
-						    <th>Total Price</th>
-						    <th>Delete</th>
-						  </tr>
+					<form action="cart.php" method="post">
+						<table class="table-hover" border="1px" width="80%" style="line-height: 30px; margin-left: auto; margin-right: auto;">
+							<tr>
+							    <th>Image</th>
+							    <th>Name</th> 
+							    <th>Price</th>
+							    <th>Quanity</th>
+							    <th>Total Price</th>
+							    <th>Delete</th>
+							  </tr>
 
-						  <?php
-						  	foreach ($_SESSION['cart'] as $id => $value) {
-						  		$rose_price = $value['qty'] * $value['price'];
-						  		$total_price += $value['price'];
+							  <?php
+							  	foreach ($_SESSION['cart'] as $id => $value) {
+							  		$rose_price = $value['qty'] * $value['price'];
+									$total_price += $rose_price;
 
-						  		echo '<tr>
-									    <td>'.$value['img'].'</td>
-									    <td>'.$value['nm'].'</td> 
-									    <td>'.$value['price'].'</td>
-									    <td><input type="text" name="quanity" value="'.$value['qty'].'" size="2"></td>
-									    <td>$'.$rose_price.'</td>
-									    <td style="width:10px;"><button class="btn btn-default">Remove</button></td>
-									  </tr>';
-						  	}
+							  		echo '<tr>
+										    <td>'.$value['img'].'</td>
+										    <td>'.$value['nm'].'</td> 
+										    <td>'.$value['price'].'</td>
+										    <td><input type="text" name="'.$id.'" value="'.$value['qty'].'" size="2"></td>
+										    <td>$'.$rose_price.'</td>
+										    <td style="width:10px;"><a class="btn btn-default" href="cart.php?id='.$id.'">Remove</a></td>
+										  </tr>';
+							  	}
 
-					  			echo '<tr>
-								  		<td colspan="4" style="text-align:right;"><strong>Total:</strong></td>
-								  		<td><strong>$'.$total_price.'</strong></td>
-								 	  </tr>';
-						  ?>
-					</table>
-					
-					<div class="cart-buttons">
-						<span><button class="btn btn-default" style="padding-right: 10px;">Update</button></span>
-						<span><button class="btn btn-default">Proceed</button></span>
-					</div>
-
+						  			echo '<tr>
+									  		<td colspan="4" style="text-align:right;"><strong>Total:</strong></td>
+									  		<td><strong>$'.$total_price.'</strong></td>
+									 	  </tr>';
+							  ?>
+						</table>
+						<div class="cart-buttons">
+							<input type="submit" class="btn btn-default" value="Update">
+						</div>
+					</form>
+					<input type="submit" class="btn btn-default" value="Proceed">
 				</div>
 			</div>		
 		</div>
