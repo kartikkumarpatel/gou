@@ -40,7 +40,7 @@
 		<td class="col-sm-4"><?php echo $row['decription']; ?></td>
 		<td class="col-sm-1"><?php echo $row['price']; ?></td>
 		<td class="col-sm-2"> 
-			<a href="addToCart.php?nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
+			<a href="addToCart.php?img=thumbnails/<?php echo $row['rose_image']; ?>&nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
 		</td>
 	</tr>
 

@@ -42,7 +42,7 @@
 				</div>
 
 				<div>
-					<table class="col-md-8 offset-md-2" border="1px">
+					<table class="col-md-8" border="1px">
 						<tr>
 						    <th>Image</th>
 						    <th>Name</th> 
@@ -52,13 +52,12 @@
 						    <th>Total Price</th>
 						  </tr>
 
-
 						  <?php
-						  	$total_price = $value['price'] * $value['qty'];
-
 						  	foreach ($_SESSION['cart'] as $id => $value) {
+						  		$total_price = $value['qty'] * $value['price'];
+
 						  		echo '<tr>
-									    <td>bkah</td>
+									    <td>'.$value['img'].'</td>
 									    <td>'.$value['nm'].'</td> 
 									    <td>'.$value['type'].'</td>
 									    <td>'.$value['price'].'</td>
