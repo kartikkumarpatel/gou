@@ -91,6 +91,7 @@ th, td{
 .left-section{
 	margin-left: 2%;
 	max-width: 700px;
+  float: left;
 }
 
 .right-section{
@@ -170,6 +171,12 @@ a.mail:hover{
 
 .roses-nav a:active{
   background-color: lightgray;
+}
+
+@media screen and (max-width: 1355px){
+  .right-section{
+    float: left;
+  }
 }
 
 @media screen and (max-width: 600px) {
