@@ -45,7 +45,7 @@
 
 
 								  		echo '<tr>
-											    <td>'.$value['img'].'</td>
+											    <td style="width:100px;"><img src="thumbnails/'.$value['img'].'"</td>
 											    <td>'.$value['nm'].'</td> 
 											    <td>'.$value['price'].'</td>
 											    <td><input type="text" name="'.$id.'" value="'.$value['qty'].'" size="2"></td>
