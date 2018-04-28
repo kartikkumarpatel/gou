@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	foreach ($_SESSION['cart'] as $id => $value) {
+		unset($_SESSION['cart'][$id]);
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +16,7 @@
 		
 		<div class="container-fluid">
 			<div class=" login-form well">
-				<h4 >Your order has been successfully submit. Please allow up to 5 working days to receive your roses. <br><br> Thank You!</h4>
+				<h4 class="logged-out"">Your order has been successfully submit. Please allow up to 5 working days to receive your roses. <br><br> Thank You!</h4>
 			</div>		
 		</div>
 	</div>

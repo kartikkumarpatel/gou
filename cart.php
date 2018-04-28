@@ -40,6 +40,9 @@
 								  	foreach ($_SESSION['cart'] as $id => $value) {
 								  		$rose_price = $value['qty'] * $value['price'];
 										$total_price += $rose_price;
+										$total_rose += $value['qty'];
+										$_SESSION['total_roses'] = $total_rose;
+
 
 								  		echo '<tr>
 											    <td>'.$value['img'].'</td>

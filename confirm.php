@@ -26,8 +26,7 @@
 							  		foreach ($_SESSION['cart'] as $id => $value) {
 								  		$rose_price = $value['qty'] * $value['price'];
 										$total_price += $rose_price;
-										$total_rose += $value['qty'];
-									
+
 								  		echo '<tr>
 												 <td>'.$value['nm'].'</td> 
 												 <td> x'.$value['qty'].'</td>
@@ -37,14 +36,14 @@
 
 								  		echo '<tr style=background-color:lightgray;>
 								  				<td><strong>Total</strong></td>
-								  				<td><strong>'.$total_rose.' Roses</strong></td>
+								  				<td><strong>'.$_SESSION['total_roses'].' Roses</strong></td>
 								  				<td><strong>$'.number_format((float)$total_price,2,'.','').'</strong></td>
 								  			  </tr>';
 								?>
 						</table>
 					</div>
-					<input type="submit" class="btn btn-default" name="confirm" value="Confirm" style="float: right;">
-					<a href="cart.php" class="btn btn-default" style="float: right; margin-right: 5px;">Back</a>
+					<input type="submit" class="btn btn-default" name="confirm" value="Confirm" style="float: right; margin-top: 10px;">
+					<a href="cart.php" class="btn btn-default" style="float: right; margin-right: 5px; margin-top: 10px;">Back</a>
 				</form>
 			</div>
 		</div>

@@ -37,7 +37,7 @@ function myFunction() {
 			  	<?php 
 			  		$login = "Login";
 			  		$user = $_SESSION['email'];
-
+			  		
 			  		$added = count($_SESSION['cart']);
 
 			  		if ($_SESSION['email']) {
