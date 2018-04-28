@@ -1,7 +1,9 @@
 .content-container{
 	background-color: #eee;
-	min-height: 650px;
+	min-height: 100vh;
 	width: 100%;
+  /*display: flex;*/
+  /*flex-direction: column;*/
 }
 
 .message{
@@ -83,22 +85,6 @@ th, td{
 .rose-data{
   padding-top: 5px;
 }
-
-.left-section{
-	margin-left: 2%;
-	max-width: 700px;
-  float: left;
-  min-height: 300px;
-}
-
-.right-section{
-	float: right;
-	min-width: 600px;
-	margin-right: 2%;
-  min-height: 300px;
-}
-
-
 
 .form-title{
 	margin-bottom: 20px; 
@@ -255,6 +241,7 @@ img {
 @media screen and (max-width: 1355px){
   .right-section{
     float: left;
+    margin-right: 2%;
   }
 }
 

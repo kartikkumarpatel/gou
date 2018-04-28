@@ -27,7 +27,7 @@
 	<div class="content-container">
 		<?php include('includes/nav.php'); ?>
 
-		<div class="left-section">
+		<div class="col-md-6">
 			<h1>Enquiries</h1>
 			<p>If you have got any queries please feel free to contact us in any form as shown below. You can ring us, email us or even fill out a enquiry form.</p>
 
@@ -66,11 +66,11 @@
 			</div>
 		</div>
 
-		<div class="right-section">
+		<div class="col-md-6">
 			<div class="map-wrapper">
 				<h1>Location</h1>
-				<div class="well">
-					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="margin-left: 70px;" 
+				<div class="well" style="width: 500px;">
+					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
 					src="http://maps.google.co.nz/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=ngati+MARU+HWY&amp;aq=&amp;sll=-37.775142,175.264924&amp;sspn=0.229308,0.195351&amp;ie=UTF8&amp;hq=&amp;hnear=Ngati+Maru+Hwy&amp;ll=-37.171368,175.560311&amp;spn=0.003599,0.008256&amp;t=m&amp;z=14&amp;output=embed"></iframe> <br />
 
 					<small><a href="http://maps.google.co.nz/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=ngati+MARU+HWY&amp;aq=&amp;sll=-37.775142,175.264924&amp;sspn=0.229308,0.195351&amp;ie=UTF8&amp;hq=&amp;hnear=Ngati+Maru+Hwy&amp;ll=-37.171368,175.560311&amp;spn=0.003599,0.008256&amp;t=m&amp;z=14" 
@@ -79,9 +79,8 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- <div>
+	<div>
 		<?php include('includes/footer.php'); ?>
-	</div> -->
+	</div>
 </body>
 </html>

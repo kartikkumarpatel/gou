@@ -7,12 +7,12 @@ function myFunction() {
         x.className = "nav";
     }
 }
+</script>
 
 <?php
 	session_start();
 ?>
 
-</script>
 
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
