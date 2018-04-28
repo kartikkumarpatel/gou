@@ -2,11 +2,11 @@
 	session_start();
 
 	if (!($_SESSION['email'])) {
-		$work = "User need's to login";
+		$work = "User is not logged in, if you wish to purchase roses please login.";
 	}
 ?>
 <div class="log-message">
-	<h4><?php echo $work ?></h4>
+	<p><?php echo $work ?></p>
 </div>
 
 <table>
@@ -38,7 +38,7 @@
 		<td class="col-sm-4"><?php echo $row['decription']; ?></td>
 		<td class="col-sm-1"><?php echo $row['price']; ?></td>
 		<td class="col-sm-2"> 
-			<a class="btn btn-default" href="addToCart.php?img=thumbnails/<?php echo $row['rose_image']; ?>&nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
+			<a class="btn btn-default" name="addCart" href="addToCart.php?&img=thumbnails/<?php echo $row['rose_image']; ?>&nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
 		</td>
 	</tr>
 
