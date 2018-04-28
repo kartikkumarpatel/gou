@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if (isset($_POST['submit']) && !($_SESSION['email'])) {
+	if (!($_SESSION['email'])) {
 		$work = "User need's to login";
 	}
 ?>
