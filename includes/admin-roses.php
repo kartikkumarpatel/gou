@@ -17,7 +17,6 @@
 			<th class="col-sm-1">Fragrant</th>
 			<th class="col-sm-4">Description</th>
 			<th class="col-sm-1">Price</th>
-			<th class="col-sm-2">Action</th>
 		</tr>
 
 	<?php 
@@ -31,13 +30,20 @@
 		<td>
 			<img src="thumbnails/<?php echo $row['rose_image']; ?>" alt="<?php echo $row['rose_name']; ?>" class="main" />
 		</td>
-		<td class="col-sm-2"><?php echo $row['rose_name']; ?></td>
-		<td class="col-sm-2"><?php echo $row['type']; ?></td>
-		<td class="col-sm-1"><?php echo $row['fragrant']; ?></td>
-		<td class="col-sm-4"><?php echo $row['decription']; ?></td>
-		<td class="col-sm-1"><?php echo $row['price']; ?></td>
-		<td class="col-sm-2"> 
-			<a class="btn btn-default" name="addCart" href="addToCart.php?&img=<?php echo $row['rose_image']; ?>'&nm=<?php echo $row['rose_name']; ?>&type=<?php echo $row['type']; ?>&price=<?php echo $row['price']; ?>">Add To Cart</a>
+		<td class="col-sm-2"><input type="" name="" value="<?php echo $row['rose_name']; ?>"></td>
+		<td class="col-sm-2"><input type="" name="" value="<?php echo $row['type']; ?>"></td>
+		<td class="col-sm-1"><input type="" name="" value="<?php echo $row['fragrant']; ?>" style="width: 40px;"></td>
+		<td class="col-sm-4"><textarea rows="5" cols="40"><?php echo $row['decription']; ?></textarea></td>
+		<td class="col-sm-1"><input type="" name="" value="<?php echo $row['price']; ?>" style="width:70px;"></td>
+		<td class="col-sm-1"> 
+			<form action="" method="post">
+				<button class="	glyphicon glyphicon-ok btn btn-default"></button>
+			</form>
+		</td>
+		<td class="col-sm-1"> 
+			<form action="" method="post">
+				<button class="glyphicon glyphicon-remove btn btn-default"></button>
+			</form>
 		</td>
 	</tr>
 <?php } ?>

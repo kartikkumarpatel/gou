@@ -5,7 +5,7 @@
 		$email = $_POST['email'];
 		$password = md5($_POST['password']);
 
-		$user = "SELECT * FROM members WHERE email = '$email' AND password = '$password'";
+		$user = "SELECT * FROM admin WHERE email = '$email' AND password = '$password'";
 		$execute_user = mysqli_query($dbconn, $user) or die(mysqli_error());
 		$data = mysqli_fetch_assoc($execute_user);
 
@@ -15,7 +15,7 @@
 			session_start();
 			$_SESSION['email'] = '$email';
 			$_SESSION['email'] = $data['email'];
-			header("Location: index.php");
+			header("Location: admin-shop.php");
 			exit();
 		}else{
 			$message = "Incorrect email or password";
@@ -24,21 +24,21 @@
 	}
 ?>
 
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <?php include('includes/header.php'); ?>
-        <title>Login</title>
-    </head>
+<head>
+    <?php include 'includes/header.php' ?>
+    <title>Admin</title>
+</head>
 
-    <body>
-        <div class="content-container">
-            <?php include('includes/nav.php'); ?>
-
+<body>
+    <div class="content-container">
+        <?php include 'includes/admin-nav.php'; ?>
+        <div class="container-fluid">
             <div class="login-form well">
                 <h3 class="form-title">Enter your login information</h3>
-                <form method="post" action="login.php">
+                <form method="post" action="admin.php">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="text" name='email' class="form-control" id="email" placeholder="Enter Name" style="width: 300px;">
@@ -55,11 +55,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        <?php include 'includes/footer.php' ?>
+    </div>
+</body>
 
-        <div>
-            <?php include 'includes/footer.php' ?>
-        </div>
-
-    </body>
-
-    </html>
+</html>
